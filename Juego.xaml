@@ -1,0 +1,158 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="SSF.Juego"
+        Title="Simon Street Fighter" Height="634" Width="1024" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" FontFamily="/SSF;component/Fonts/#Consolas" Icon="/SSF;component/Images/SSF_icon.png" Closing="Window_Closing">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SSF;component/Images/ssf_b.gif" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.45*" />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.45*" />
+        </Grid.ColumnDefinitions>
+        <Label Content="99" Grid.Column="1" Margin="0,35,0,488" x:Name="lblTiempoRonda" HorizontalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="32" VerticalContentAlignment="Center">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="0.639" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <ProgressBar Margin="94,48,0,0" x:Name="Vida1" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Height="26" Width="358" Background="Red" Foreground="Yellow" BorderBrush="White">
+            <ProgressBar.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<RotateTransform Angle="180"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</ProgressBar.RenderTransform>
+        </ProgressBar>
+        <ProgressBar Grid.Column="2" Margin="0,48,95.6,0" x:Name="Vida2" VerticalAlignment="Top" Height="26" Width="358" Background="Red" Foreground="Yellow" BorderBrush="White"></ProgressBar>
+        <Label Height="40" Margin="23,78,118,0" x:Name="lblNombre1" VerticalAlignment="Top" FontFamily="/SSF;component/Fonts/#Consolas" FontSize="18.667" BorderBrush="Black" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Lime" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Grid.Column="2" Height="40" Margin="101,78,23,0" x:Name="lblNombre2" VerticalAlignment="Top" FontFamily="/SSF;component/Fonts/#Consolas" FontSize="18.667" HorizontalContentAlignment="Right" BorderBrush="Black" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Lime" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Content="Ronda 1" Height="35" Margin="437,0,434,0" x:Name="lblRonda" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="16" Grid.ColumnSpan="3">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Yellow" Offset="0.639" />
+                    <GradientStop Color="Red" Offset="0" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Image Height="64" HorizontalAlignment="Left" x:Name="imgJug1" Stretch="Fill" VerticalAlignment="Top" Width="56" Margin="23,10,0,0" />
+        <Image Grid.Column="2" Height="64" Margin="0,10,23,0" x:Name="imgJug2" Stretch="Fill" VerticalAlignment="Top" HorizontalAlignment="Right" Width="56" FlowDirection="RightToLeft" />
+        <TextBox Height="33.5" HorizontalAlignment="Left" Margin="48,564.5,0,0" Name="textBox1" VerticalAlignment="Top" Width="280" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontSize="16" FontWeight="Bold" />
+        <Label Height="44" HorizontalAlignment="Left" Margin="94,516.5,0,0" Name="label1" VerticalAlignment="Top" Width="234" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="26.667" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="34" Margin="347,564,8,0" Name="label2" VerticalAlignment="Top" FontFamily="Consolas" FontSize="21.333" VerticalContentAlignment="Center" FontWeight="Bold" BorderBrush="Black" OpacityMask="Black">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="44" HorizontalAlignment="Left" Margin="48,516.5,0,0" Name="label3" VerticalAlignment="Top" Width="42" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="26.667" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <TextBox Height="33.5" HorizontalAlignment="Left" Margin="124,564.5,0,0" Name="textBox2" VerticalAlignment="Top" Width="280" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16" FontWeight="Bold" />
+        <Label Height="44" HorizontalAlignment="Left" Margin="124,516.5,0,0" Name="label4" VerticalAlignment="Top" Width="236.25" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="26.667" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="34" HorizontalAlignment="Left" Margin="11,564,0,0" Name="label5" VerticalAlignment="Top" Width="103.1" Grid.Column="2" FontFamily="Consolas" FontSize="21.333" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold" BorderBrush="Black">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="44" HorizontalAlignment="Left" Margin="364.25,516.5,0,0" Name="label6" VerticalAlignment="Top" Width="38.75" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="26.667" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="Red" />
+                    <GradientStop Color="DarkBlue"/>
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="56" HorizontalAlignment="Left" Margin="23,126,0,0" Name="label7" VerticalAlignment="Top" Width="956" d:LayoutOverrides="GridBox" FontFamily="Consolas" FontSize="21.333" Grid.ColumnSpan="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" BorderBrush="Black" FontWeight="Bold">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label Height="23" HorizontalAlignment="Left" Margin="0,12,0,0" Name="puntuacion2" VerticalAlignment="Top" Width="179" Foreground="Yellow" Grid.Column="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontWeight="Bold" FontSize="14" />
+        <Label Height="25" HorizontalAlignment="Left" Margin="281,12,0,0" Name="puntuacion1" VerticalAlignment="Top" Width="170" Foreground="Yellow" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="14" FontWeight="Bold" />
+        <Label Height="23" HorizontalAlignment="Left" Margin="191,12,0,0" Name="racha2" VerticalAlignment="Top" Width="85" Foreground="Yellow" Grid.Column="2" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Height="25" HorizontalAlignment="Left" Margin="176,12,0,0" Name="racha1" VerticalAlignment="Top" Width="87" Foreground="Yellow" FontSize="14" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Margin="23,168,39,0" Name="label8" FontFamily="Consolas" FontSize="26.667" HorizontalContentAlignment="Center" BorderBrush="Black" FontWeight="Bold" VerticalAlignment="Top" Height="61" Grid.ColumnSpan="3">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Image Height="21" HorizontalAlignment="Left" Margin="399.1,85,0,0" Name="image1" VerticalAlignment="Top" Width="25" />
+        <Image Height="21" HorizontalAlignment="Left" Margin="428.1,85,0,0" Name="image2" VerticalAlignment="Top" Width="26" />
+        <Image Grid.Column="2" Height="21" HorizontalAlignment="Left" Margin="4,85,0,0" Name="image3" VerticalAlignment="Top" Width="26" />
+        <Image Grid.Column="2" Height="21" HorizontalAlignment="Left" Margin="34,85,0,0" Name="image4" VerticalAlignment="Top" Width="25" />
+        <Image Height="210" HorizontalAlignment="Left" Margin="281.1,0,0,89.5" Name="image5" Stretch="Fill" VerticalAlignment="Bottom" Width="175" StretchDirection="Both" d:LayoutOverrides="VerticalAlignment, GridBox" />
+        <Image Height="204.5" HorizontalAlignment="Right" Margin="0,0,272.1,95" Name="image6" Stretch="Fill" VerticalAlignment="Bottom" Width="175" FlowDirection="RightToLeft" StretchDirection="Both" DataContext="{Binding}" Grid.Column="2" d:LayoutOverrides="VerticalAlignment, GridBox" />
+        <MediaElement Height="101" HorizontalAlignment="Left" Margin="202,266,0,0" Name="mediaJ1" VerticalAlignment="Top" Width="160" Visibility="Hidden" UnloadedBehavior="Manual" />
+        <MediaElement Height="120" HorizontalAlignment="Left" Margin="10,10,0,0" Name="mediaJ2" VerticalAlignment="Top" Width="160" Visibility="Hidden" UnloadedBehavior="Manual" />
+        <MediaElement Height="101" HorizontalAlignment="Left" Margin="10,10,0,0" Name="mediaAmbiente" VerticalAlignment="Top" Width="160" Visibility="Hidden" UnloadedBehavior="Manual" />
+        <MediaElement Height="101" HorizontalAlignment="Left" Margin="10,10,0,0" Name="mediaFondo" UnloadedBehavior="Manual" VerticalAlignment="Top" Visibility="Hidden" Width="160" Volume="0.2" />
+        <Image Height="111" HorizontalAlignment="Left" Margin="202,407,0,0" Name="muerto1" Stretch="Fill" VerticalAlignment="Top" Width="249" />
+        <Image Height="111" HorizontalAlignment="Left" Margin="0,407,0,0" Name="muerto2" Stretch="Fill" VerticalAlignment="Top" Width="251" Grid.Column="2" FlowDirection="RightToLeft" />
+        <Button Height="24" HorizontalAlignment="Left" Margin="345,247,0,0" Name="btSalir" VerticalAlignment="Top" Width="106" Visibility="Hidden" Click="btSalir_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_salir.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+        <Button Grid.Column="2" Height="24" HorizontalAlignment="Left" Margin="0,247,0,0" Name="btRanking" VerticalAlignment="Top" Width="106" Visibility="Hidden" Click="btRanking_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_ranking.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

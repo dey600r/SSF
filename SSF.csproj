@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8E7E9126-6083-4AC2-924F-65C1636523A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SSF</RootNamespace>
+    <AssemblyName>SSF</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20621.0</ExpressionBlendVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconoSSF.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="FachadaSocket.cs" />
+    <Compile Include="Juego.xaml.cs">
+      <DependentUpon>Juego.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Ranking.xaml.cs">
+      <DependentUpon>Ranking.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SSFRanking.cs" />
+    <Compile Include="vOnline.xaml.cs">
+      <DependentUpon>vOnline.xaml</DependentUpon>
+    </Compile>
+    <Page Include="ElegirJugador.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Juego.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ElegirJugador.xaml.cs">
+      <DependentUpon>ElegirJugador.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Jugador.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Ranking.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="vOnline.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <BlendEmbeddedFont Include="Resources\SSF4 ABUKET.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+  </ItemGroup>
+  <ItemGroup>
+    <BlendEmbeddedFont Include="Fonts\consola.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\consolab.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\consolai.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <BlendEmbeddedFont Include="Fonts\consolaz.ttf">
+      <IsSystemFont>True</IsSystemFont>
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <Resource Include="Images\AdonDefensa.png" />
+    <Resource Include="Images\blanka.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\cammy.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CammyDefensa.png" />
+    <Resource Include="Images\ken.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ryu.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\zangief.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\dhalsim.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\monigote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BlendEmbeddedFont Include="SSF4 ABUKET.ttf">
+      <All>True</All>
+      <AutoFill>True</AutoFill>
+    </BlendEmbeddedFont>
+    <Resource Include="SSFRanking.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Rank.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\select_player_b.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ssf_b.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_local.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_online.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_ranking.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_salir.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_atras.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\boton_jugar.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Portada_SSF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circulorojo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\circuloverde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\BlankaAtaca1.png" />
+    <Resource Include="Images\BlankaAtaca2.png" />
+    <Resource Include="Images\BlankaAtaca3.png" />
+    <Resource Include="Images\BlankaAtaca4.png" />
+    <Resource Include="Images\BlankaAtaca5.png" />
+    <Resource Include="Images\BlankaDefensa.png" />
+    <Resource Include="Images\BlankaNormal1.png" />
+    <Resource Include="Images\BlankaNormal2.png" />
+    <Resource Include="Images\BlankaNormal3.png" />
+    <Resource Include="Images\BlankaNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\DhalsimAtaca1.png" />
+    <Resource Include="Images\DhalsimAtaca2.png" />
+    <Resource Include="Images\DhalsimAtaca3.png" />
+    <Resource Include="Images\DhalsimAtaca4.png" />
+    <Resource Include="Images\DhalsimAtaca5.png" />
+    <Resource Include="Images\DhalsimDefensa.png" />
+    <Resource Include="Images\DhalsimNormal1.png" />
+    <Resource Include="Images\DhalsimNormal2.png" />
+    <Resource Include="Images\DhalsimNormal3.png" />
+    <Resource Include="Images\DhalsimNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\RyuAtaca1.png" />
+    <Resource Include="Images\RyuAtaca2.png" />
+    <Resource Include="Images\RyuAtaca3.png" />
+    <Resource Include="Images\RyuAtaca4.png" />
+    <Resource Include="Images\RyuAtaca5.png" />
+    <Resource Include="Images\RyuDefensa.png" />
+    <Resource Include="Images\RyuNormal1.png" />
+    <Resource Include="Images\RyuNormal2.png" />
+    <Resource Include="Images\RyuNormal3.png" />
+    <Resource Include="Images\RyuNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ZangiefAtaca1.png" />
+    <Resource Include="Images\ZangiefAtaca2.png" />
+    <Resource Include="Images\ZangiefAtaca3.png" />
+    <Resource Include="Images\ZangiefAtaca4.png" />
+    <Resource Include="Images\ZangiefAtaca5.png" />
+    <Resource Include="Images\ZangiefDefensa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ZangiefNormal1.png" />
+    <Resource Include="Images\ZangiefNormal2.png" />
+    <Resource Include="Images\ZangiefNormal3.png" />
+    <Resource Include="Images\ZangiefNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AdonAtaca1.png" />
+    <Resource Include="Images\AdonAtaca2.png" />
+    <Resource Include="Images\AdonAtaca3.png" />
+    <Resource Include="Images\AdonAtaca4.png" />
+    <Resource Include="Images\AdonNormal1.png" />
+    <Resource Include="Images\AdonNormal2.png" />
+    <Resource Include="Images\AdonNormal3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\AdonAtaca5.png" />
+    <Resource Include="Images\AdonNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\CammyAtaca1.png" />
+    <Resource Include="Images\CammyAtaca2.png" />
+    <Resource Include="Images\CammyAtaca3.png" />
+    <Resource Include="Images\CammyAtaca4.png" />
+    <Resource Include="Images\CammyNormal1.png" />
+    <Resource Include="Images\CammyNormal2.png" />
+    <Resource Include="Images\CammyNormal3.png" />
+    <Resource Include="Images\CammyNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\SagatAtaca1.png" />
+    <Resource Include="Images\SagatAtaca2.png" />
+    <Resource Include="Images\SagatAtaca3.png" />
+    <Resource Include="Images\SagatAtaca4.png" />
+    <Resource Include="Images\SagatAtaca5.png" />
+    <Resource Include="Images\SagatDefensa.png" />
+    <Resource Include="Images\SagatNormal1.png" />
+    <Resource Include="Images\SagatNormal2.png" />
+    <Resource Include="Images\SagatNormal3.png" />
+    <Resource Include="Images\SagatNormal4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Audio\AdonDamage.wav" />
+    <Content Include="Audio\AdonGolpe.wav" />
+    <Content Include="Audio\BlankaDamage.wav" />
+    <Content Include="Audio\BlankaGolpe.wav" />
+    <Content Include="Audio\CammyDamage.wav" />
+    <Content Include="Audio\CammyGolpe.wav" />
+    <Content Include="Audio\DhalsimDamage.wav" />
+    <Content Include="Audio\DhalsimGolpe.wav" />
+    <Content Include="Audio\J1Win.wav" />
+    <Content Include="Audio\J2Win.wav" />
+    <Content Include="Audio\KenDamage.wav" />
+    <Content Include="Audio\KenGolpe.wav" />
+    <Content Include="Audio\Round1.wav" />
+    <Content Include="Audio\Round2.wav" />
+    <Content Include="Audio\Round3.wav" />
+    <Content Include="Audio\RyuDamage.wav" />
+    <Content Include="Audio\RyuGolpe.wav" />
+    <Content Include="Audio\SagatDamage.wav" />
+    <Content Include="Audio\SagatGolpe.wav" />
+    <Content Include="Audio\TimeOver.wav" />
+    <Content Include="Audio\ZangiefDamage.wav" />
+    <Content Include="Audio\ZangiefGolpe.wav" />
+    <Resource Include="iconoSSF.ico" />
+    <Resource Include="Images\boton_siguiente.jpg" />
+    <Resource Include="Images\boton_unirse.jpg" />
+    <Resource Include="Images\boton_crear.jpg" />
+    <Resource Include="Images\ZangiefGolpeado.png" />
+    <Resource Include="Images\BlankaMuerto.png" />
+    <Resource Include="Images\CammyMuerto.png" />
+    <Resource Include="Images\DhalsimMuerto.png" />
+    <Resource Include="Images\KenMuerto.png" />
+    <Resource Include="Images\RyuMuerto.png" />
+    <Resource Include="Images\SagatMuerto.png" />
+    <Resource Include="Images\ZangiefMuerto.png" />
+    <Resource Include="Images\AdonMuerto.png" />
+    <Resource Include="Images\DhalsimGolpeado.png" />
+    <Resource Include="Images\KenGolpeado.png" />
+    <Resource Include="Images\RyuGolpeado.png" />
+    <Resource Include="Images\SagatGolpeado.png" />
+    <Resource Include="Images\CammyGolpeado.png" />
+    <Resource Include="Images\BlankaGolpeado.png" />
+    <Resource Include="Images\AdonGolpeado.png" />
+    <Resource Include="Images\sagat.gif" />
+    <Resource Include="Images\adonn.png" />
+    <Resource Include="Images\SSF_icon.png" />
+    <Resource Include="Images\KenAtaca1.png" />
+    <Resource Include="Images\KenAtaca2.png" />
+    <Resource Include="Images\KenAtaca3.png" />
+    <Resource Include="Images\KenAtaca4.png" />
+    <Resource Include="Images\KenAtaca5.png" />
+    <Resource Include="Images\KenDefensa.png" />
+    <Resource Include="Images\KenNormal1.png" />
+    <Resource Include="Images\KenNormal2.png" />
+    <Resource Include="Images\KenNormal3.png" />
+    <Resource Include="Images\KenNormal4.png" />
+    <Resource Include="Images\CammyAtaca5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\Expression\Blend\.NETFramework\v4.0\Microsoft.Expression.Blend.WPF.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

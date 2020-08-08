@@ -1,0 +1,42 @@
+﻿<Window x:Class="SSF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Simon Street Fighter" Height="634" Width="1024" FontFamily="/SSF;component/Fonts/#Consolas" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow" ResizeMode="NoResize" Icon="/SSF;component/Images/SSF_icon.png">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.55*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+            <RowDefinition Height="0.15*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+            <ColumnDefinition Width="0.25*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="/SSF;component/Images/Portada_SSF.gif" />
+        </Grid.Background>
+        <Button Grid.Row="3" Margin="64,33,76,31" Name="btLocal" FontFamily="/SSF;component/Fonts/#Consolas" Click="btLocal_Click" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_local.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+        <Button Margin="65,31,62,31" Name="btRanking" Grid.Column="2" Grid.Row="3" FontFamily="/SSF;component/Fonts/#Consolas" Click="btRanking_Click" BorderBrush="{x:Null}" Foreground="{x:Null}" Height="26.9">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_ranking.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+        <Button Margin="66,31,71,31" Name="btOnline" Grid.Column="1" Grid.Row="3" FontFamily="/SSF;component/Fonts/#Consolas" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btOnline_Click" Width="113.5" Height="26.9">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_online.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+        <Button Content="SALIR" Grid.Column="3" Grid.Row="3" Margin="78,31,57,33" Name="btSalir" Click="btSalir_Click" Foreground="{x:Null}" BorderBrush="{x:Null}" Height="26.9">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_salir.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>

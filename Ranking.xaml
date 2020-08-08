@@ -1,0 +1,286 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="SSF.Ranking"
+        Title="Simon Street Fighter" x:Name="SimonSFRanking" Height="634" Width="1024" WindowStartupLocation="CenterScreen" ShowInTaskbar="False" WindowStyle="ThreeDBorderWindow" FontFamily="Consolas" ResizeMode="NoResize" Icon="/SSF;component/Images/SSF_icon.png" Closing="SimonSFRanking_Closing">
+    <Window.Background>
+        <ImageBrush ImageSource="/SSF;component/Images/Rank.jpg" Stretch="UniformToFill" TileMode="None" />
+    </Window.Background>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.7*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="0.1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.15*" />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.1*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.2*" />
+            <ColumnDefinition Width="0.15*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbl1" Content="" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Background="Transparent">
+        	<Label.Foreground>
+        		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+        			<GradientStop Color="Red"/>
+        			<GradientStop Color="Yellow" Offset="1"/>
+        		</LinearGradientBrush>
+        	</Label.Foreground>
+        </Label>
+    	<Label x:Name="lbl2" Content="" Grid.Column="2" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl3" Content="" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="3" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl4" Content="" Grid.Column="1" Grid.Row="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl5" Grid.Row="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="2" Background="Transparent" Margin="0,0,1,0">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl6" Content="" Grid.Column="3" Grid.Row="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent" d:LayoutOverrides="GridBox">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl7" Content="" Grid.Row="3" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl8" Content="" Grid.Column="2" Grid.Row="3" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl9" Content="" Grid.Row="3" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="3" Background="Transparent" Margin="-1,0,0,0">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl10" Content="" Grid.Column="1" Grid.Row="4" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl11" Content="" Grid.Row="4" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="2" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl12" Content="" Grid.Column="3" Grid.Row="4" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl13" Content="" Grid.Row="5" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="1" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl14" Content="" Grid.Column="2" Grid.Row="5" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl15" Content="" Grid.Row="5" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="3" Background="Transparent" Margin="-1,0,0,0">
+    		<Label.Foreground>
+    			<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+    				<GradientStop Color="Red"/>
+    				<GradientStop Color="Yellow" Offset="1"/>
+    			</LinearGradientBrush>
+    		</Label.Foreground>
+    	</Label>
+    	<Label x:Name="lbl16" Grid.Column="4" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="Transparent">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    	<Label x:Name="lbl17" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Grid.Column="5" Background="Transparent">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    	<Label x:Name="lbl18" Grid.Column="6" Grid.Row="1" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    	<Label x:Name="lbl19" Grid.Row="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="4" Background="Transparent">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    	<Label x:Name="lbl20" Grid.Column="5" Grid.Row="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" Background="Transparent">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Button Content="Atrás" Grid.Row="6" Margin="7.461,14.615,8,8" x:Name="btAtras" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="btAtras_Click" Width="102" Height="24">
+            <Button.Background>
+                <ImageBrush ImageSource="/SSF;component/Images/boton_atras.jpg" Stretch="None" TileMode="None" />
+            </Button.Background>
+        </Button>
+        <Label Grid.Column="6" Grid.Row="2" Height="46" HorizontalAlignment="Left" x:Name="lbl21" VerticalAlignment="Top" Width="155" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" Grid.ColumnSpan="2" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label HorizontalAlignment="Left" Margin="0,1.538,0,0" x:Name="lbl22" Width="77" Grid.Column="4" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl23" Grid.Column="5" Margin="0,1.538,0,0" Grid.Row="3" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl24" Grid.Column="6" Margin="0,-1.538,1,0" Grid.Row="3" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl25" Grid.Column="4" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl26" Grid.Column="5" Grid.Row="4" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl27" Grid.Column="6" Margin="0,0,1,0" Grid.Row="4" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl28" Grid.Column="4" Grid.Row="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+        <Label x:Name="lbl29" Grid.Column="5" Margin="0.048,0.157,0.456,0.384" Grid.Row="5" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+            <Label.RenderTransform>
+        		<TransformGroup>
+        			<ScaleTransform/>
+        			<SkewTransform/>
+        			<RotateTransform Angle="-0.624"/>
+        			<TranslateTransform/>
+        		</TransformGroup>
+        	</Label.RenderTransform>
+        </Label>
+        <Label x:Name="lbl30" Grid.Column="6" Margin="0,0,1,0" Grid.Row="5" VerticalContentAlignment="Center" HorizontalContentAlignment="Left" FontFamily="/SSF;component/Resources/#SSF4 ABUKET" FontSize="14">
+            <Label.Foreground>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Red" Offset="0" />
+                    <GradientStop Color="Yellow" Offset="1" />
+                </LinearGradientBrush>
+            </Label.Foreground>
+        </Label>
+    </Grid>
+</Window>

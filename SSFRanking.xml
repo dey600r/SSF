@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ranking>
+  <rank pos="1">
+    <nombre> SSF </nombre>
+    <puntos> 10000 </puntos>
+  </rank>
+  <rank pos="2">
+    <nombre> SSF </nombre>
+    <puntos> 9000 </puntos>
+  </rank>
+  <rank pos="3">
+    <nombre> SSF </nombre>
+    <puntos> 8000 </puntos>
+  </rank>
+  <rank pos="4">
+    <nombre> SSF </nombre>
+    <puntos> 7000 </puntos>
+  </rank>
+  <rank pos="5">
+    <nombre> SSF </nombre>
+    <puntos> 6000 </puntos>
+  </rank>
+  <rank pos="6">
+    <nombre> SSF </nombre>
+    <puntos> 5000 </puntos>
+  </rank>
+  <rank pos="7">
+    <nombre> SSF </nombre>
+    <puntos> 4000 </puntos>
+  </rank>
+  <rank pos="8">
+    <nombre> SSF </nombre>
+    <puntos> 3000 </puntos>
+  </rank>
+  <rank pos="9">
+    <nombre> SSF </nombre>
+    <puntos> 2000 </puntos>
+  </rank>
+  <rank pos="10">
+    <nombre> SSF </nombre>
+    <puntos> 1000 </puntos>
+  </rank>
+</ranking>
