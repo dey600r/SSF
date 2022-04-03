@@ -13,11 +13,11 @@ Proyect is created with:
 
 <table>
   <tr>
-    <td><img src="./images-readme/Captura1.png"></td>
-    <td><img src="./images-readme/Captura2.png"></td>
+    <td><img src="./images-readme/Captura1.PNG"></td>
+    <td><img src="./images-readme/Captura2.PNG"></td>
   </tr>
   <tr>
-    <td><img src="./images-readme/Captura3.png"></td>
-    <td><img src="./images-readme/Captura4.png"></td>
+    <td><img src="./images-readme/Captura3.PNG"></td>
+    <td><img src="./images-readme/Captura4.PNG"></td>
   </tr>
  </table>
